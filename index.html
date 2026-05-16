@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XV Años · Fotografía y Video · Marcos Reyes</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --dark: #111111;
+    --dark2: #1a1a1a;
+    --white: #ffffff;
+    --cream: #f5f0e8;
+    --gold: #c9a96e;
+    --gold-light: #e2c9a0;
+    --gray: #888888;
+    --light-gray: #f2f2f2;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+  }
+
+  section { width: 100%; position: relative; }
+
+  /* ═══════════════════════════════
+     PAG 1 – PORTADA
+  ═══════════════════════════════ */
+  .pag1 {
+    height: 100vh;
+    min-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .pag1 .bg {
+    position: absolute; inset: 0;
+    background: url('https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640616/Foto-_Pixels_Fotografia_y_Video-319_ozlhnp.jpg') center center / cover no-repeat;
+  }
+  .pag1 .bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.80) 40%, rgba(0,0,0,0.15) 100%);
+  }
+  .pag1-content {
+    position: relative; z-index: 2;
+    text-align: center;
+    padding: 0 20px 60px;
+    color: var(--white);
+  }
+  .pag1-content .subtitle-top {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+    margin-bottom: 8px;
+    opacity: 0.9;
+  }
+  .pag1-content .big-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(80px, 15vw, 150px);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+  }
+  .pag1-content .big-title-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(12px, 2vw, 18px);
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    margin-bottom: 20px;
+  }
+  .pag1-content .plans-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    margin-bottom: 4px;
+  }
+  .pag1-content .year {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 6px;
+  }
+
+  /* ═══════════════════════════════
+     PAG 2 – ME LLAMO MARCOS REYES
+  ═══════════════════════════════ */
+  .pag2 {
+    background: var(--white);
+    padding: 80px 40px;
+  }
+  .pag2-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .pag2-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 50px;
+    align-items: stretch;
+  }
+  .pag2-photo {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+  }
+  .pag2-name-box {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    border: 1px solid #e8e8e8;
+    border-left: none;
+  }
+  .pag2-name-box h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(28px, 4vw, 52px);
+    line-height: 1.1;
+    color: var(--black);
+    margin-bottom: 16px;
+  }
+  .pag2-name-box .tu-fotografo {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--black);
+  }
+  .pag2-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .pag2-text p strong { color: var(--black); }
+
+  /* ═══════════════════════════════
+     PAG 3 – QUOTE IMAGEN COMPLETA
+  ═══════════════════════════════ */
+  .pag3 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .pag3 .bg {
+    position: absolute; inset: 0;
+    background: url('https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640223/Pixels_Fotografia_y_Video-643_ouv9ds.jpg') center center / cover no-repeat;
+  }
+  .pag3 .bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.82) 45%, rgba(0,0,0,0.1) 100%);
+  }
+  .pag3-content {
+    position: relative; z-index: 2;
+    color: var(--white);
+    padding: 60px 40px 70px;
+    width: 100%;
+    text-align: center;
+  }
+  .pag3-content .meta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .pag3-content p {
+    font-size: clamp(14px, 1.8vw, 18px);
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto;
+    font-weight: 300;
+    opacity: 0.92;
+  }
+
+  /* ═══════════════════════════════
+     PAG 4 – GALERÍA 3 FOTOS
+  ═══════════════════════════════ */
+  .pag4 {
+    background: var(--white);
+    padding: 60px 40px;
+  }
+  .pag4-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .pag4-top img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+  }
+  .pag4-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .pag4-bottom img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ═══════════════════════════════
+     PAG 5 – CÓMO FUNCIONARÁ
+  ═══════════════════════════════ */
+  .pag5 {
+    background: var(--dark);
+    color: var(--white);
+    padding: 80px 40px;
+  }
+  .pag5-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .pag5-inner .section-big-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 8vw, 90px);
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .pag5-inner .section-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .pag5-intro {
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.85;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+  .pag5-intro strong { font-weight: 700; }
+  .steps {
+    text-align: left;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  .steps::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: rgba(255,255,255,0.15);
+  }
+  .step {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .step:last-child { border-bottom: none; }
+  .step-num {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
+  }
+  .step-content h3 {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .step-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    opacity: 0.75;
+    font-weight: 300;
+  }
+
+  @media (max-width: 700px) {
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-top: 36px;
+    }
+    .steps::before { display: none; }
+    .step {
+      flex-direction: column;
+      gap: 12px;
+      padding: 20px 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-right: 1px solid rgba(255,255,255,0.06);
+      align-items: flex-start;
+    }
+    .step:nth-child(even) { border-right: none; }
+    .step:nth-child(3), .step:nth-child(4) { border-bottom: none; }
+    .step-num { width: 36px; height: 36px; min-width: 36px; font-size: 14px; }
+    .step-content h3 { font-size: 13px; }
+    .step-content p { font-size: 13px; }
+  }
+
+  /* ═══════════════════════════════
+     PAG 6 – QUOTE IMAGEN
+  ═══════════════════════════════ */
+  .pag6 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .pag6 .bg {
+    position: absolute; inset: 0;
+    background: url('https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640422/Foto-_Pixels_Fotografia_y_Video-164_ualdwq.jpg') center center / cover no-repeat;
+  }
+  .pag6 .bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+  .pag6-content {
+    position: relative; z-index: 2;
+    color: var(--white);
+    padding: 60px 50px;
+    max-width: 600px;
+  }
+  .pag6-content .quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 5vw, 58px);
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ═══════════════════════════════
+     PAG 7 – PAQUETES PORTADA
+  ═══════════════════════════════ */
+  .pag7 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .pag7 .bg {
+    position: absolute; inset: 0;
+    background: url('https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640285/Pixels_Fotografia_y_Video-388_dgqj3e.jpg') center top / cover no-repeat;
+  }
+  .pag7 .bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 40%, rgba(0,0,0,0.05) 100%);
+  }
+  .pag7-content {
+    position: relative; z-index: 2;
+    color: var(--white);
+    padding: 50px 40px 70px;
+    width: 100%;
+    text-align: center;
+  }
+  .pag7-content .pack-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+  }
+  .pag7-content .pack-big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(70px, 14vw, 140px);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin-bottom: 6px;
+  }
+  .pag7-content .pack-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+  }
+  .pag7-content .pack-desc {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.75;
+    max-width: 580px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+
+  /* ═══════════════════════════════
+     PAG 8 – LOS PAQUETES
+  ═══════════════════════════════ */
+  .pag8 {
+    background: var(--dark);
+    color: var(--white);
+    padding: 80px 40px;
+  }
+  .pag8-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Tab switcher */
+  .pkg-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+  .pkg-tab {
+    flex: 1;
+    padding: 14px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.45);
+    border-right: 1px solid rgba(255,255,255,0.18);
+    transition: all .25s;
+  }
+  .pkg-tab:last-child { border-right: none; }
+  .pkg-tab.active { background: var(--white); color: var(--black); }
+  .pkg-tab:hover:not(.active) { color: rgba(255,255,255,0.85); }
+
+  .pkg-panel { display: none; flex-direction: column; gap: 70px; }
+  .pkg-panel.active { display: flex; }
+
+  .package-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .package-row.reverse { direction: rtl; }
+  .package-row.reverse > * { direction: ltr; }
+  .package-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+  .package-info { text-align: center; }
+  .package-badge {
+    display: inline-block;
+    border: 1px solid var(--white);
+    padding: 4px 16px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .package-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 6vw, 70px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .package-features {
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 20px;
+  }
+  .package-gift {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .package-gift strong { font-weight: 700; }
+  .package-price {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  /* ─── CONTRATAR BUTTONS ─── */
+  .btn-contratar {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 14px 28px;
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.35s;
+  }
+  .btn-contratar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    transform: translateX(-101%);
+    transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+    z-index: 0;
+  }
+  .btn-contratar:hover::before { transform: translateX(0); }
+  .btn-contratar:hover { color: var(--black); }
+  .btn-contratar span { position: relative; z-index: 1; }
+  .btn-contratar-shine { animation: btn-shine 3s ease-in-out infinite; }
+  @keyframes btn-shine {
+    0%, 100% { box-shadow: 0 0 0px rgba(255,255,255,0); }
+    50% { box-shadow: 0 0 18px rgba(255,255,255,0.35); }
+  }
+
+  /* ═══════════════════════════════
+     PAG 9 – FORMAS DE PAGO
+  ═══════════════════════════════ */
+  .pag9 { background: var(--white); }
+  .pag9-img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    display: block;
+  }
+  .pag9-content {
+    padding: 70px 40px 80px;
+    text-align: center;
+  }
+  .pag9-content .section-big-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 8vw, 90px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .pag9-content .section-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 40px;
+  }
+  .pag9-desc {
+    font-size: 15px;
+    line-height: 1.85;
+    color: #333;
+    max-width: 560px;
+    margin: 0 auto 50px;
+  }
+  .pag9-desc strong { font-weight: 700; color: var(--black); }
+  .payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .payment-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .payment-num {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--black);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .payment-label { line-height: 1.3; text-align: left; }
+
+  /* ═══════════════════════════════
+     PAG 10 – ¿Y SI SOLO QUIERO SESIÓN?
+  ═══════════════════════════════ */
+  .pag10 {
+    background: var(--dark);
+    color: var(--white);
+    padding: 80px 40px;
+  }
+  .pag10-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .pag10-inner .section-big-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 7vw, 78px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .pag10-inner .section-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-bottom: 40px;
+  }
+  .pag10-intro {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+  .pag10-intro strong { font-weight: 700; }
+
+  /* ═══════════════════════════════
+     PAG 11 – ADICIONALES
+  ═══════════════════════════════ */
+  .pag11 {
+    background: var(--dark);
+    color: var(--white);
+    padding: 80px 40px;
+  }
+  .pag11-inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .pag11-inner .section-big-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 8vw, 90px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  .pag11-inner .section-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .adicionales-intro {
+    font-size: 15px;
+    font-weight: 300;
+    opacity: 0.72;
+    margin-bottom: 50px;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .adicionales-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .adicional-item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .adicional-item:last-child { border-bottom: none; }
+  .adicional-icon {
+    width: 10px; height: 10px; min-width: 10px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+  .adicional-content { flex: 1; }
+  .adicional-content h3 {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    color: var(--cream);
+  }
+  .adicional-content p {
+    font-size: 13px;
+    line-height: 1.75;
+    opacity: 0.65;
+    font-weight: 300;
+  }
+  .adicional-price {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--gold-light);
+    white-space: nowrap;
+    padding-top: 2px;
+    letter-spacing: 0.5px;
+  }
+  .adicional-divider {
+    margin: 20px 0 10px;
+    padding: 14px 0 6px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  /* ═══════════════════════════════
+     PAG 12 – FOTOGRAFIAMOS TODO
+  ═══════════════════════════════ */
+  .pag12 {
+    background: var(--dark);
+    color: var(--white);
+    padding: 80px 40px;
+  }
+  .pag12-inner { max-width: 900px; margin: 0 auto; }
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+  .detail-item { position: relative; overflow: hidden; }
+  .detail-item img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85);
+    transition: filter 0.3s;
+  }
+  .detail-item:hover img { filter: brightness(1); }
+  .detail-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .pag12-text { text-align: center; }
+  .pag12-text .big-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 9vw, 100px);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .pag12-text p {
+    font-size: 14px;
+    line-height: 2.1;
+    opacity: 0.75;
+    font-weight: 300;
+    max-width: 640px;
+    margin: 0 auto;
+    letter-spacing: 1.5px;
+    font-family: 'Courier New', monospace;
+  }
+
+  /* ═══════════════════════════════
+     PAG 13 – PREGUNTAS PORTADA
+  ═══════════════════════════════ */
+  .pag13 {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .pag13 .bg {
+    position: absolute; inset: 0;
+    background: url('https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640220/Pixels_Fotografia_y_Video-6_ljtgoy.jpg') 65% 30% / cover no-repeat;
+  }
+  .pag13 .bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 40%, rgba(0,0,0,0.55) 100%);
+  }
+  .pag13-content {
+    position: relative; z-index: 2;
+    color: var(--white);
+    padding: 40px 40px 50px;
+    width: 100%;
+    text-align: center;
+  }
+  .pag13-content .section-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom: 6px;
+  }
+  .pag13-content .big-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 10vw, 110px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .pag13-content .big-title-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 4vw, 46px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1;
+    opacity: 0.85;
+  }
+    font-size: clamp(60px, 12vw, 130px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1;
+  }
+
+  /* ═══════════════════════════════
+     PAG 14 – PREGUNTAS FRECUENTES
+  ═══════════════════════════════ */
+  .pag14 {
+    background: var(--dark);
+    color: var(--white);
+    padding: 80px 40px 60px;
+  }
+  .pag14-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .pag14-inner .section-big-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 8vw, 90px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 0.95;
+    margin-bottom: 8px;
+  }
+  .pag14-inner .section-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-bottom: 60px;
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
+  }
+  .faq-item {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-num {
+    width: 42px; height: 42px; min-width: 42px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--black);
+    font-weight: 700; font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .faq-content h3 { font-weight: 700; font-size: 15px; margin-bottom: 0; line-height: 2; }
+
+  /* ═══════════════════════════════
+     PAG 15 – NO DEJES PARA DESPUÉS
+  ═══════════════════════════════ */
+  .pag15 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--white);
+    text-align: center;
+  }
+  .pag15 .bg {
+    position: absolute; inset: 0;
+    background: url('https://res.cloudinary.com/dgo3agrzb/image/upload/v1778718117/Pixels_Fotografia_y_Video-526_dwhiic.jpg') center center / cover no-repeat;
+  }
+  @media (min-width: 701px) {
+    .pag15 .bg { background-attachment: fixed; }
+  }
+  .pag15 .bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.62) 60%, rgba(0,0,0,0.80) 100%);
+  }
+  .pag15-inner {
+    position: relative; z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+  .pag15 .agenda-text {
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.75;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+  }
+  .pag15 .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(50px, 10vw, 110px);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  .pag15 .cta-desc {
+    font-size: 15px;
+    font-weight: 300;
+    opacity: 0.85;
+    line-height: 1.75;
+    margin-bottom: 50px;
+  }
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .contact-item:hover { opacity: 0.7; }
+  .contact-icon { width: 28px; height: 28px; opacity: 0.85; flex-shrink: 0; }
+
+  /* ─── WHATSAPP FLOAT ─── */
+  .wa-float {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    z-index: 9999;
+    width: 50px; height: 50px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 2px 8px rgba(0,0,0,0.25);
+    text-decoration: none;
+    animation: wa-pulse 2.2s ease-in-out infinite;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .wa-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37,211,102,0.6), 0 4px 12px rgba(0,0,0,0.3);
+    animation: none;
+  }
+  .wa-float svg { width: 26px; height: 26px; fill: #fff; }
+  @keyframes wa-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(37,211,102,0.45), 0 2px 8px rgba(0,0,0,0.25); }
+    50% { transform: scale(1.07); box-shadow: 0 6px 30px rgba(37,211,102,0.65), 0 4px 14px rgba(0,0,0,0.3); }
+  }
+
+  /* ─── SESION INTRO BLOCK ─── */
+  .sesion-intro-block {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .sesion-intro-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 5.5vw, 62px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.05;
+    margin-bottom: 8px;
+  }
+  .sesion-intro-sub {
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: lowercase;
+    font-weight: 300;
+    opacity: 0.6;
+    margin-bottom: 24px;
+  }
+  .sesion-intro-text {
+    font-size: 15px;
+    font-weight: 300;
+    opacity: 0.85;
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0 auto 12px;
+  }
+  .sesion-intro-text strong { font-weight: 700; }
+
+  /* ─── FAQ ACCORDION ─── */
+  .faq-item {
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+  }
+  .faq-answer {
+    display: none;
+    font-size: 14px;
+    line-height: 1.75;
+    opacity: 0.7;
+    font-weight: 300;
+    margin-top: 4px;
+    padding-bottom: 6px;
+  }
+  .faq-item.open .faq-answer { display: block; }
+  .faq-arrow {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.7;
+    min-width: 28px;
+    text-align: center;
+    transition: transform 0.25s;
+    margin-left: auto;
+    padding-left: 12px;
+    line-height: 2;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); opacity: 1; }
+
+  /* ─── MOBILE GRID FOR PAG15 CONTACT ─── */
+  @media (max-width: 700px) {
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .contact-item {
+      font-size: 18px;
+    }
+  }
+
+  /* ─── IMAGE LIGHTBOX ─── */
+  .lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0,0,0,0.88);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    animation: lb-fadein 0.2s ease;
+  }
+  .lightbox-overlay.active { display: flex; }
+  @keyframes lb-fadein { from { opacity: 0; } to { opacity: 1; } }
+  .lightbox-img {
+    max-width: 92vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 3px;
+    box-shadow: 0 8px 60px rgba(0,0,0,0.7);
+    pointer-events: none;
+    animation: lb-scalein 0.22s cubic-bezier(.4,0,.2,1);
+  }
+  @keyframes lb-scalein { from { transform: scale(0.93); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  .lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    color: rgba(255,255,255,0.8);
+    font-size: 32px;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+    transition: opacity 0.2s;
+  }
+  .lightbox-close:hover { opacity: 0.5; }
+  .lightbox-timer {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+  }
+  .lightbox-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.35);
+    animation: lb-dot 3s linear forwards;
+  }
+  @keyframes lb-dot {
+    0% { background: rgba(255,255,255,0.9); transform: scale(1.3); }
+    100% { background: rgba(255,255,255,0.15); transform: scale(1); }
+  }
+  /* make all page images show pointer */
+  img { cursor: zoom-in; }
+
+  @media (max-width: 700px) {
+    .pag4 { padding: 30px 12px; }
+    .pag4-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .pag4-top {
+      grid-column: 1 / -1;
+    }
+    .pag4-top img {
+      max-height: 220px;
+    }
+    .pag4-bottom {
+      display: contents;
+    }
+    .pag4-bottom img {
+      aspect-ratio: 1;
+      width: 100%;
+    }
+  }
+
+  /* ─── MOBILE RESPONSIVE FOR PAG14 FAQ FOOTER ─── */
+  .faq-footer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    opacity: 1;
+    color: var(--black);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: var(--black);
+    text-decoration-thickness: 1.5px;
+  }
+  /* on dark backgrounds keep it white */
+  .pag14 .faq-footer {
+    color: var(--white);
+    text-decoration-color: var(--gold);
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 700px) {
+    .pag2-top { grid-template-columns: 1fr; }
+    .pag2-name-box { border-left: 1px solid #e8e8e8; border-top: none; }
+    .package-row, .package-row.reverse { grid-template-columns: 1fr; direction: ltr; }
+    .details-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-row { gap: 24px; }
+    .pag6-content { padding: 40px 28px; }
+    .pkg-tabs { flex-direction: column; }
+    .pkg-tab { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.18); }
+    .pkg-tab:last-child { border-bottom: none; }
+  }
+  @media (max-width: 480px) {
+    .pag2, .pag4, .pag5, .pag8, .pag9-content, .pag10, .pag12, .pag14, .pag15 { padding-left: 20px; padding-right: 20px; }
+    .pag7-content, .pag13-content { padding-left: 20px; padding-right: 20px; }
+    .pag5-inner .section-big-title { font-size: clamp(36px, 11vw, 70px); letter-spacing: 2px; }
+    .pag14-inner .section-big-title { font-size: clamp(36px, 11vw, 60px); letter-spacing: 2px; }
+    .pag5-inner .section-sub, .pag9-content .section-sub,
+    .pag10-inner .section-sub, .pag14-inner .section-sub,
+    .pag13-content .section-sub { letter-spacing: 3px; font-size: 10px; }
+    .pag7-content .pack-label { display: none; }
+    .pag6 .bg { background-position: center 30%; }
+    .pag6 { align-items: flex-end; }
+    .pag6-content { max-width: 100%; padding: 30px 20px 50px; }
+    .pag6-content .quote { font-size: clamp(26px, 8vw, 42px); }
+    .btn-contratar { font-size: 11px; padding: 12px 18px; letter-spacing: 1px; }
+    .pag11-content .adelanto-sub { letter-spacing: 4px; }
+    .pag13 { min-height: 50vh; }
+    .pag13 .bg { background-position: 65% 25%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ PAG 1 – PORTADA ═══ -->
+<section class="pag1">
+  <div class="bg"></div>
+  <div class="pag1-content">
+    <p class="subtitle-top">fotografía y video</p>
+    <div class="big-title">XV Años</div>
+    <div class="big-title-sub">QUINCEAÑERA PHOTOGRAPHY</div>
+    <p class="plans-text">p l a n e s &nbsp; y &nbsp; p a q u e t e s</p>
+    <p class="year">2 0 2 6</p>
+    <div style="margin-top: 28px;">
+      <a href="#planes" class="btn-contratar" style="border-color: rgba(255,255,255,0.6); font-size: 11px; letter-spacing: 3px;"><span>Ver Planes</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAG 2 – ME LLAMO MARCOS REYES ═══ -->
+<section class="pag2">
+  <div class="pag2-inner">
+    <div class="pag2-top">
+      <img class="pag2-photo" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1777600481/Generated_Image_August_31_2025_-_2_50PM_qmtqxz_wvocyc.jpg" alt="Marcos Reyes">
+      <div class="pag2-name-box">
+        <h1>Me llamo<br>Marcos Reyes.</h1>
+        <p class="tu-fotografo">Tu fotógrafo.</p>
+      </div>
+    </div>
+    <div class="pag2-text">
+      <p>Mi misión es ayudarte a guardar el recuerdo más importante de tus XV: <strong>ese día donde todo cambia y comienza una nueva etapa.</strong></p>
+      <p>Sé que cumplir quince no es solo una fiesta. Es emoción, nervios, sueños, abrazos y memorias que quedarán en el corazón de toda la familia. Por eso, capturo cada instante con sensibilidad, belleza y verdad.</p>
+      <p>Quiero que tengas la certeza de que cada gesto, cada risa, cada momento especial quedará guardado con autenticidad, elegancia y mucho amor.</p>
+      <p>Porque los XV se viven una sola vez… pero se recuerdan para siempre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAG 3 – QUOTE ═══ -->
+<section class="pag3">
+  <div class="bg"></div>
+  <div class="pag3-content">
+    <div class="meta-title">Los XV se viven una sola vez…</div>
+    <p>Pero se recuerdan para siempre. Quiero que dentro de muchos años, al ver tus fotos, no solo recuerdes cómo te veías, sino que revivas la emoción de ese día. Mi trabajo es guardar ese sentimiento para siempre. Quiero que tu galería sea el tesoro favorito de tu familia.</p>
+  </div>
+</section>
+
+<!-- ═══ PAG 4 – GALERÍA ═══ -->
+<section class="pag4">
+  <div class="pag4-inner">
+    <div class="pag4-top">
+      <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640499/Foto-_Pixels_Fotografia_y_Video-189_ejea1f.jpg" alt="XV Años fotografía">
+    </div>
+    <div class="pag4-bottom">
+      <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640474/IMG_0454_j5oidz.jpg" alt="Sesión pre-quince">
+      <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640428/Foto-_Pixels_Fotografia_y_Video-248_vrwlqv.jpg" alt="Quinceañera exterior">
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAG 5 – CÓMO FUNCIONARÁ ═══ -->
+<section class="pag5">
+  <div class="pag5-inner">
+    <div class="section-big-title">Cómo Funcionará</div>
+    <p class="section-sub">sesión fotográfica</p>
+    <p class="pag5-intro">Cada fotografía está cuidadosamente pensada para capturar la esencia de tus XV: tu personalidad, tu estilo, tus emociones y todo lo que hace este día tan único.</p>
+    <p class="pag5-intro"><strong>Mirá cómo es el proceso completo:</strong></p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Planificación Personalizada</h3>
+          <p>Antes de la sesión, conversamos sobre el estilo que te gusta, el vestuario, locaciones y todos los detalles importantes. Me aseguro de que cada imagen refleje quién sos en esta etapa tan especial.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Sesión Relajada y Divertida</h3>
+          <p>Ya sea una sesión pre-xv, el evento o ambas, busco que disfrutes cada momento. Te guío con seguridad, sin poses forzadas, para que todo fluya de forma natural, auténtica y con mucha vibra.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Captura de Momentos Reales</h3>
+          <p>Desde las miradas emocionadas hasta los abrazos en familia, me enfoco en esos instantes que no se repiten. Quiero que cada foto te haga sentir el corazón de ese día.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Entrega de Recuerdos Inolvidables</h3>
+          <p>Recibís una galería digital con tus fotos editadas en alta calidad, listas para compartir o imprimir. También podés elegir álbumes, cuadros y otros productos que harán de tus XV una historia visual para siempre.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAG 6 – QUOTE IMAGEN ═══ -->
+<section class="pag6">
+  <div class="bg"></div>
+  <div class="pag6-content">
+    <div class="quote">Tus XV como en las películas.</div>
+  </div>
+</section>
+
+<!-- ═══ PAG 7 – PAQUETES PORTADA ═══ -->
+<section class="pag7" id="planes">
+  <div class="bg"></div>
+  <div class="pag7-content">
+    <div class="pack-big">Paquetes</div>
+    <p class="pack-sub"></p>
+    <p class="pack-desc">Estos son los paquetes que mis clientes más eligen y son un excelente punto de partida. Si uno te gusta, pero no se ajusta al 100%, podemos agendar una reunión y lo personalizamos con gusto para que se adapte a tus prioridades.</p>
+  </div>
+</section>
+
+<!-- ═══ PAG 8 – LOS PAQUETES ═══ -->
+<section class="pag8">
+  <div class="pag8-inner">
+
+    <div class="pkg-tabs">
+      <button class="pkg-tab active" onclick="switchTab('evento')">Evento + Sesión Pre-XV</button>
+      <button class="pkg-tab" onclick="switchTab('sesion')">Solo Sesión Pre-XV</button>
+    </div>
+
+    <!-- ── PANEL: EVENTO + SESIÓN ── -->
+    <div class="pkg-panel active" id="tab-evento">
+
+      <div class="package-row">
+        <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640255/Pixels_Fotografia_y_Video-88_tbews1.jpg" alt="Paquete 1">
+        <div class="package-info">
+          <div class="package-badge">Más Elegido</div>
+          <div class="package-name">Paquete 1</div>
+          <div class="package-features">
+            Fotografía completa del evento<br>
+            (recepción hasta el final de la fiesta)<br>
+            Entrega digital en alta resolución<br>
+            Galería online para compartir<br>
+            Sesión Pre-Quince incluida<br>
+            Locaciones a elección (estudio / exteriores)<br>
+            3 cambios de vestidos de alta costura<br>
+            Maquillaje y peinado profesional
+          </div>
+          <div class="package-gift"><strong>Regalo:</strong> Pendrive + 50 fotos impresas en caja de madera</div><br>
+          <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%201%20XV%20Evento&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 460.000</span></a>
+        </div>
+      </div>
+
+      <div class="package-row reverse">
+        <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640245/Pixels_Fotografia_y_Video-7_szcyje.jpg" alt="Paquete 2">
+        <div class="package-info">
+          <div class="package-name">Paquete 2</div>
+          <div class="package-features">
+            Incluye todo lo del Paquete 1<br>
+            + Video Trailer / Resumen del Evento<br>
+            (2–3 min con los mejores momentos)
+          </div>
+          <div class="package-gift"><strong>Regalo:</strong> Pendrive + 50 fotos impresas en caja de madera</div><br>
+          <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%202%20XV%20Evento%20%2B%20Video&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 940.000</span></a>
+        </div>
+      </div>
+
+      <div class="package-row">
+        <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640221/Pixels_Fotografia_y_Video-469_rbgi11.jpg" alt="Paquete 3">
+        <div class="package-info">
+          <div class="package-name">Paquete 3</div>
+          <div class="package-features">
+            Incluye todo lo del Paquete 1<br>
+            + Cobertura de Video Profesional Completa<br>
+            Video Sesión Pre-XV (2–3 min) con Drone<br>
+            Video Trailer / Resumen del Evento (2–3 min)<br>
+            Video Extendido del Evento (20–40 min)
+          </div>
+          <div class="package-gift"><strong>Regalo:</strong> Pendrive + 50 fotos impresas en caja de madera</div><br>
+          <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%203%20XV%20Completo&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 1.250.000</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── PANEL: SOLO SESIÓN ── -->
+    <div class="pkg-panel" id="tab-sesion">
+
+      <!-- Intro copy (previously pag10) -->
+      <div class="sesion-intro-block">
+        <div class="sesion-intro-title">¿Y si solo querés<br>la sesión de fotos?</div>
+        <p class="sesion-intro-sub">sesión pre-quince</p>
+        <p class="sesion-intro-text">¡Claro que sí! Muchas quinceañeras eligen celebrar esta etapa de una manera diferente, como un viaje soñado o una reunión más personal, en lugar de una fiesta tradicional. Esa decisión es igual de especial y merece un recuerdo que esté a la altura.</p>
+        <p class="sesion-intro-text">Por eso, creé paquetes enfocados 100% en la sesión de fotos, diseñados para capturar tu esencia en esta etapa <strong>inolvidable</strong>.</p>
+      </div>
+
+      <div class="package-row">
+        <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640255/Pixels_Fotografia_y_Video-88_tbews1.jpg" alt="Sesión 1">
+        <div class="package-info">
+          <div class="package-name">Paquete 1</div>
+          <div class="package-features">
+            Duración: 3 Horas<br>
+            Locación a elección.<br>
+            Todas las fotos digitales editadas.<br>
+            Maquillaje profesional<br>
+            3 cambios de Outfit.<br>
+            Dirección de poses y elección de Outfit.<br>
+            <em style="opacity:0.6;font-style:italic;">Ideal: estilo clásico + moderno</em>
+          </div>
+          <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%201%20Sesión%20XV&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 350.000</span></a>
+        </div>
+      </div>
+
+      <div class="package-row reverse">
+        <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640245/Pixels_Fotografia_y_Video-7_szcyje.jpg" alt="Sesión 2">
+        <div class="package-info">
+          <div class="package-name">Paquete 2</div>
+          <div class="package-features">
+            Incluye todo lo del Paquete 1<br><br>
+            + Video Reel de la sesión<br>
+            (formato vertical, ideal para redes)<br>
+            + Fotolibro 30×45 cm con 25 fotos<br>
+            <em style="opacity:0.6;font-style:italic;">Ideal: experiencia audiovisual completa</em>
+          </div>
+          <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%202%20Sesión%20XV&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 650.000</span></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- ═══ PAG 11 – ADICIONALES ═══ -->
+<section class="pag11">
+  <div class="pag11-inner">
+    <div class="section-big-title">Adicionales</div>
+    <p class="section-sub">productos y servicios opcionales</p>
+    <p class="adicionales-intro">Productos y servicios adicionales que puedes agregar a tu paquete elegido.</p>
+
+    <div class="adicionales-list">
+
+      <div class="adicional-divider">Productos Impresos</div>
+
+      <div class="adicional-item">
+        <div class="adicional-icon"></div>
+        <div class="adicional-content">
+          <h3>Álbum Fotolibro Impreso — Pequeño</h3>
+          <p>Con 25 fotos (8 páginas), tamaño 20×40 cm.</p>
+        </div>
+        <div class="adicional-price">$85.000</div>
+      </div>
+
+      <div class="adicional-item">
+        <div class="adicional-icon"></div>
+        <div class="adicional-content">
+          <h3>Álbum Fotolibro Impreso — Grande</h3>
+          <p>Con 80 fotos (15 páginas), tamaño 30×45 cm.</p>
+        </div>
+        <div class="adicional-price">$150.000</div>
+      </div>
+
+      <div class="adicional-item">
+        <div class="adicional-icon"></div>
+        <div class="adicional-content">
+          <h3>Porta Retratos para cada Mesa</h3>
+          <p>Consultar tamaños disponibles. Precio por unidad.</p>
+        </div>
+        <div class="adicional-price">desde $9.500 c/u</div>
+      </div>
+
+      <div class="adicional-item">
+        <div class="adicional-icon"></div>
+        <div class="adicional-content">
+          <h3>Cuadro Polaroid</h3>
+          <p>Impresión artística en formato Polaroid para decoración o regalo.</p>
+        </div>
+        <div class="adicional-price">desde $65.000</div>
+      </div>
+
+      <div class="adicional-divider">Servicios</div>
+
+      <div class="adicional-item">
+        <div class="adicional-icon"></div>
+        <div class="adicional-content">
+          <h3>Servicio QR en Tiempo Real — Fotos para Invitados</h3>
+          <p>Asegura que tus invitados también tengan fotos increíbles. Mientras yo me enfoco en los momentos principales, un fotógrafo profesional adicional se dedicará 100% a tus invitados.<br><br>
+          Compartimos las fotos a través de un código QR · Galería en línea · Cobertura de 2 horas · Cantidad ilimitada de fotos.</p>
+        </div>
+        <div class="adicional-price">$135.000</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PAG 12 – FOTOGRAFIAMOS TODOS LOS MOMENTOS ═══ -->
+<section class="pag12">
+  <div class="pag12-inner">
+
+    <div class="pag12-text" style="margin-bottom: 60px;">
+      <div class="big-title">Fotografiamos<br>Todos los Momentos</div>
+      <p>Mi misión es documentarlo todo: la creatividad de tu sesión, la cuidada ambientación, la emoción de tu vals, las sonrisas de tus invitados, cada actividad especial y la energía de la fiesta. Al fotografiar cada momento, construimos un recuerdo visual completo asegurando que ningún instante se pierda y que puedas revivir tu día tal y como lo soñaste.</p>
+    </div>
+
+    <div class="details-grid">
+      <div class="detail-item">
+        <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640220/Pixels_Fotografia_y_Video-450_mrl8pv.jpg" alt="Sesión">
+        <div class="detail-label">Sesión</div>
+      </div>
+      <div class="detail-item">
+        <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640221/Pixels_Fotografia_y_Video-469_rbgi11.jpg" alt="Ambientación">
+        <div class="detail-label">Ambientación</div>
+      </div>
+      <div class="detail-item">
+        <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640245/Pixels_Fotografia_y_Video-7_szcyje.jpg" alt="Vals">
+        <div class="detail-label">Vals</div>
+      </div>
+      <div class="detail-item">
+        <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640255/Pixels_Fotografia_y_Video-88_tbews1.jpg" alt="Invitados">
+        <div class="detail-label">Invitados</div>
+      </div>
+      <div class="detail-item">
+        <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640285/Pixels_Fotografia_y_Video-388_dgqj3e.jpg" alt="Actividades">
+        <div class="detail-label">Actividades</div>
+      </div>
+      <div class="detail-item">
+        <img src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640499/Foto-_Pixels_Fotografia_y_Video-189_ejea1f.jpg" alt="Fiesta">
+        <div class="detail-label">Fiesta</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ PAG 13 – PREGUNTAS PORTADA ═══ -->
+<section class="pag13">
+  <div class="bg"></div>
+  <div class="pag13-content">
+    <p class="section-sub">sesión fotográfica</p>
+    <div class="big-title">Preguntas</div>
+    <div class="big-title-sub">Frecuentes</div>
+  </div>
+</section>
+
+<!-- ═══ PAG 14 – PREGUNTAS FRECUENTES ═══ -->
+<section class="pag14">
+  <div class="pag14-inner">
+
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-num">1</div>
+        <div class="faq-content">
+          <h3>¿Cuándo es el mejor momento para hacer la sesión pre-xv?</h3>
+          <p class="faq-answer">Recomiendo agendarla entre 1 y 2 meses antes del evento, así tenemos tiempo suficiente para elegir el lugar, preparar el vestuario y usar las fotos en invitaciones o decoración.</p>
+        </div>
+        <div class="faq-arrow">▾</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-num">2</div>
+        <div class="faq-content">
+          <h3>¿La cobertura incluye fotos durante toda la fiesta?</h3>
+          <p class="faq-answer">Sí. Dependiendo del paquete, cubro desde el inicio hasta el cierre del evento. Podemos ajustarlo a tus necesidades para que no falte ningún momento especial.</p>
+        </div>
+        <div class="faq-arrow">▾</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-num">3</div>
+        <div class="faq-content">
+          <h3>¿Puedo incluir a mi familia o amigas en la sesión pre-xv?</h3>
+          <p class="faq-answer">¡Claro! Me encanta sumar a las personas que son importantes para vos. Solo necesitamos organizarlo con anticipación para incluir todo en el plan.</p>
+        </div>
+        <div class="faq-arrow">▾</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-num">4</div>
+        <div class="faq-content">
+          <h3>¿Me ayudás a posar si no tengo experiencia frente a la cámara?</h3>
+          <p class="faq-answer">Por supuesto. No necesitás saber posar. Te guiaré en todo momento para que te sientas segura, cómoda y salgas increíble en cada toma.</p>
+        </div>
+        <div class="faq-arrow">▾</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-num">5</div>
+        <div class="faq-content">
+          <h3>¿Cuánto tardás en entregar las fotos?</h3>
+          <p class="faq-answer">Tu galería digital estará lista en un aproximado de 15 a 45 días hábiles. Si elegiste productos impresos, coordinamos la entrega con todo el cuidado que merecen.</p>
+        </div>
+        <div class="faq-arrow">▾</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-num">6</div>
+        <div class="faq-content">
+          <h3>Formas de Pago</h3>
+          <p class="faq-answer">Para garantizar tu fecha, es necesario abonar una seña en el momento de la reserva. La fecha será oficialmente confirmada luego de ese pago.<br><br>El saldo restante puede ser abonado hasta la fecha de la sesión, de forma práctica y flexible.<br><br>Aceptamos: efectivo o transferencia.</p>
+        </div>
+        <div class="faq-arrow">▾</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FRASE CIERRE ═══ -->
+<div style="background: var(--white); text-align: center; padding: 48px 24px 52px;">
+  <p class="faq-footer" style="color: var(--black); text-decoration-color: #333;">Estas son algunas, si te quedan dudas consultanos.</p>
+</div>
+
+<!-- ═══ PAG 15 – NO DEJES PARA DESPUÉS ═══ -->
+<section class="pag15">
+  <div class="bg"></div>
+  <div class="pag15-inner">
+    <p class="agenda-text">Mi agenda para sesiones y quinceaños es limitada.</p>
+    <div class="cta-title">No dejes<br>para<br>después</div>
+    <p class="cta-desc">Garantizá ya tu fecha y obtené memorias eternizadas con todo el cariño que merecés. Porque los XV se viven una sola vez… pero se recuerdan para siempre.</p>
+    <div class="contact-row">
+      <a class="contact-item" href="https://wa.me/5493517364379" target="_blank">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        351-7364379
+      </a>
+      <a class="contact-item" href="https://www.instagram.com/pixels_fotografia_y_video/" target="_blank">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        @pixels_fotografia_y_video
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FLOATING WHATSAPP BUTTON ═══ -->
+<a class="wa-float" href="https://api.whatsapp.com/send/?phone=5493517364379&text&type=phone_number&app_absent=0" target="_blank" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <div class="lightbox-timer" id="lightbox-timer"></div>
+</div>
+
+<script>
+  function switchTab(tab) {
+    document.querySelectorAll('.pkg-tab').forEach((t, i) => {
+      t.classList.toggle('active', (i === 0 && tab === 'evento') || (i === 1 && tab === 'sesion'));
+    });
+    document.getElementById('tab-evento').classList.toggle('active', tab === 'evento');
+    document.getElementById('tab-sesion').classList.toggle('active', tab === 'sesion');
+  }
+
+  function toggleFaq(el) {
+    el.classList.toggle('open');
+  }
+
+  // Lightbox
+  let lbTimer = null;
+
+  function openLightbox(src) {
+    const overlay = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const timerEl = document.getElementById('lightbox-timer');
+    img.src = src;
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Animated dots countdown (3 dots for 3 seconds)
+    timerEl.innerHTML = '';
+    for (let i = 0; i < 3; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'lightbox-dot';
+      dot.style.animationDelay = i + 's';
+      timerEl.appendChild(dot);
+    }
+
+    clearTimeout(lbTimer);
+    lbTimer = setTimeout(closeLightbox, 3000);
+  }
+
+  function closeLightbox() {
+    const overlay = document.getElementById('lightbox');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    clearTimeout(lbTimer);
+  }
+
+  // Attach click to all images except the wa-float svg
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openLightbox(img.src);
+      });
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
