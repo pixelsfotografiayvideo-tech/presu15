@@ -592,6 +592,252 @@
     padding-top: 28px;
   }
 
+  /* ─── EV-CARDS (3-column package layout) ─── */
+  .ev-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .ev-card {
+    border-right: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .ev-card:last-child { border-right: none; }
+  .ev-card-featured {
+    background: rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+  }
+  .ev-card-badge-top {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 5px 14px;
+    white-space: nowrap;
+  }
+  .ev-card-header {
+    padding: 36px 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .ev-card-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .ev-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.2;
+  }
+  .ev-card-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .ev-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+  }
+  .ev-inv-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+  }
+  .ev-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    margin-top: -8px;
+  }
+  .ev-features {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ev-features li {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.4;
+    padding-left: 14px;
+    position: relative;
+  }
+  .ev-features li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+  .ev-features-plus li::before { content: '+'; color: var(--gold); }
+  .ev-includes-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 14px 16px;
+  }
+  .ev-includes-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 10px;
+  }
+  .ev-gift {
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    background: rgba(201,169,110,0.08);
+    border: 1px solid rgba(201,169,110,0.2);
+    padding: 10px 14px;
+    border-radius: 2px;
+  }
+  .ev-gift strong { color: var(--gold-light); }
+  .ev-ideal {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .ev-btn {
+    display: block;
+    text-align: center;
+    margin-top: auto;
+    padding: 14px 16px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.8);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.35s, border-color 0.35s;
+    z-index: 0;
+  }
+  /* fill de izquierda a derecha al hover — igual que en presubodas */
+  .ev-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    transform: translateX(-101%);
+    transition: transform 0.38s cubic-bezier(.4,0,.2,1);
+    z-index: -1;
+  }
+  .ev-btn:hover { color: var(--black); border-color: var(--white); }
+  .ev-btn:hover::before { transform: translateX(0); }
+  /* text above pseudo-elements */
+  .ev-btn > * { position: relative; z-index: 2; }
+
+  /* botón destacado: dorado con fill dorado claro al hover */
+  .ev-btn-highlight {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--black);
+    animation: ev-btn-pulse 2.4s ease-in-out infinite;
+  }
+  .ev-btn-highlight::before { background: var(--gold-light); }
+  .ev-btn-highlight:hover { color: var(--black); border-color: var(--gold-light); animation: none; }
+  .ev-btn-highlight:hover::before { transform: translateX(0); }
+
+  /* shimmer continuo para el botón dorado (mobile sin hover) */
+  @keyframes ev-btn-pulse {
+    0%   { box-shadow: 0 0 0px rgba(201,169,110,0);    border-color: var(--gold); }
+    40%  { box-shadow: 0 0 18px rgba(201,169,110,0.7); border-color: var(--gold-light); }
+    60%  { box-shadow: 0 0 18px rgba(201,169,110,0.7); border-color: var(--gold-light); }
+    100% { box-shadow: 0 0 0px rgba(201,169,110,0);    border-color: var(--gold); }
+  }
+
+  /* shimmer sweep sobre el dorado — brillo que cruza */
+  .ev-btn-highlight::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%);
+    animation: ev-shimmer 3s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+  @keyframes ev-shimmer {
+    0%   { left: -75%; opacity: 0; }
+    10%  { opacity: 1; }
+    50%  { left: 125%; opacity: 1; }
+    51%  { opacity: 0; }
+    100% { left: 125%; opacity: 0; }
+  }
+
+  /* 2-card layout for sesion panel */
+  #tab-sesion .ev-cards {
+    grid-template-columns: 1fr 1fr;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── Swipe hint & snap dots (hidden on desktop, shown mobile via @media) ── */
+  .ev-cards-hint {
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold-light);
+    margin-bottom: 14px;
+    animation: hint-blink 2.5s ease-in-out infinite;
+  }
+  @keyframes hint-blink {
+    0%, 100% { opacity: 0.5; }
+    50%       { opacity: 1; }
+  }
+  .ev-snap-dots {
+    display: none;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 16px;
+  }
+  .ev-snap-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: none; padding: 0;
+    cursor: pointer;
+    transition: all 0.25s;
+  }
+  .ev-snap-dot.active {
+    background: var(--gold);
+    width: 18px;
+    border-radius: 3px;
+  }
+
   .package-img {
     width: 100%;
     aspect-ratio: 4/3;
@@ -1034,12 +1280,6 @@
     line-height: 1;
     opacity: 0.85;
   }
-    font-size: clamp(60px, 12vw, 130px);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    line-height: 1;
-  }
 
   /* ═══════════════════════════════
      PAG 14 – PREGUNTAS FRECUENTES
@@ -1377,6 +1617,33 @@
     .pag2-top { grid-template-columns: 1fr; }
     .pag2-name-box { border-left: 1px solid #e8e8e8; border-top: none; }
     .pkg-slide-inner, .pkg-slide-inner.reverse { grid-template-columns: 1fr; direction: ltr; }
+    /* mobile snap scroll */
+    .ev-cards {
+      display: flex !important;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 0;
+      border: none;
+      padding-bottom: 4px;
+    }
+    .ev-cards::-webkit-scrollbar { display: none; }
+    .ev-card {
+      flex: 0 0 85%;
+      min-width: 85%;
+      scroll-snap-align: start;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-right: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      margin-right: 12px;
+    }
+    .ev-card:last-child { margin-right: 0; }
+    .ev-card-featured { border: 1px solid rgba(255,255,255,0.25) !important; }
+    #tab-sesion .ev-cards { max-width: 100%; }
+    .ev-cards-hint { display: flex !important; }
+    .ev-snap-dots { display: flex !important; }
     .details-grid { grid-template-columns: repeat(2, 1fr); }
     .contact-row { gap: 24px; }
     .pag6-content { padding: 40px 28px; }
@@ -1402,6 +1669,177 @@
     .pag13 { min-height: 50vh; }
     .pag13 .bg { background-position: 65% 25%; }
   }
+  /* ═══════════════════════════════
+     COMPARATIVA DE PAQUETES
+  ═══════════════════════════════ */
+  .pag-comp {
+    background: var(--dark);
+    padding: 80px 40px;
+  }
+  .pag-comp-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .comp-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold-light);
+    margin-bottom: 14px;
+  }
+  .comp-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 5vw, 62px);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 48px;
+  }
+  .comp-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  /* ── tabla ── */
+  .comp-table-wrap {
+    overflow-x: auto;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .comp-table thead tr {
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .comp-th-feature {
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.35);
+    width: 44%;
+  }
+  .comp-th-plan {
+    padding: 18px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.45);
+    width: 18.67%;
+    text-align: center;
+  }
+  .comp-th-featured {
+    background: var(--cream);
+    color: var(--black);
+    position: relative;
+  }
+  .comp-star-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--black);
+  }
+  .comp-table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+  }
+  .comp-table tbody tr:last-child { border-bottom: none; }
+  .comp-table tbody tr:hover { background: rgba(255,255,255,0.03); }
+  .comp-table td {
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    text-align: left;
+    line-height: 1.4;
+  }
+  .comp-table td:not(:first-child) {
+    text-align: center;
+    padding: 16px 12px;
+  }
+  .comp-col-featured {
+    background: rgba(255,255,255,0.04);
+    border-left: 1px solid rgba(255,255,255,0.08);
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .comp-yes {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .comp-yes-big {
+    background: var(--gold);
+    color: var(--black);
+    width: 32px; height: 32px;
+    font-size: 14px;
+  }
+  .comp-no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    color: rgba(255,255,255,0.18);
+    font-size: 12px;
+  }
+
+  /* ── CTA ── */
+  .comp-cta {
+    margin-top: 40px;
+  }
+  .comp-cta-btn {
+    display: inline-block;
+    padding: 16px 36px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.35s, border-color 0.35s;
+  }
+  .comp-cta-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    transform: translateX(-101%);
+    transition: transform 0.38s cubic-bezier(.4,0,.2,1);
+    z-index: 0;
+  }
+  .comp-cta-btn:hover { color: var(--black); border-color: var(--white); }
+  .comp-cta-btn:hover::before { transform: translateX(0); }
+  .comp-cta-btn span, .comp-cta-btn { position: relative; z-index: 1; }
+
+  /* ── mobile ── */
+  @media (max-width: 700px) {
+    .pag-comp { padding: 60px 16px; }
+    .comp-th-feature { width: 42%; padding: 14px 10px; font-size: 8px; }
+    .comp-th-plan { padding: 14px 6px; font-size: 10px; width: 19.33%; }
+    .comp-table td { padding: 14px 10px; font-size: 12px; }
+    .comp-table td:not(:first-child) { padding: 14px 6px; }
+    .comp-yes { width: 24px; height: 24px; font-size: 11px; }
+    .comp-yes-big { width: 28px; height: 28px; }
+    .comp-no { width: 24px; height: 24px; }
+    .comp-cta-btn { font-size: 10px; padding: 14px 20px; letter-spacing: 1px; }
+  }
+
 </style>
 </head>
 <body>
@@ -1534,76 +1972,85 @@
 
     <!-- ── PANEL: EVENTO + SESIÓN ── -->
     <div class="pkg-panel active" id="tab-evento">
-      <div class="pkg-slider-wrap">
-        <div class="pkg-slider" id="slider-evento">
+      <div class="ev-cards-hint">→ DESLIZÁ PARA VER LOS PLANES</div>
+      <div class="ev-cards" id="ev-cards-evento">
 
-          <!-- Slide 1 -->
-          <div class="pkg-slide">
-            <div class="pkg-slide-inner">
-              <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778717137/Pixels_Fotografia_y_Video-241_pm9hu9.jpg" alt="Paquete 1">
-              <div class="package-info">
-                <div class="package-badge">Más Elegido</div>
-                <div class="package-name">Paquete 1</div>
-                <div class="package-features">
-                  Fotografía completa del evento (6 Hs)<br>
-                  Entrega digital en alta resolución<br>
-                  Galería online para compartir
-                </div>
-                <div class="package-gift"><strong>Regalo:</strong> Video Cronológico de Fotos</div><br>
-                <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%201%20XV%20Evento&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 550.000</span></a>
-              </div>
-            </div>
+        <!-- Card 1 -->
+        <div class="ev-card">
+          <div class="ev-card-header">
+            <div class="ev-card-label">PAQUETE 1 — FOTO</div>
+            <div class="ev-card-title">Solo<br>Fotografía</div>
           </div>
-
-          <!-- Slide 2 -->
-          <div class="pkg-slide">
-            <div class="pkg-slide-inner reverse">
-              <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640245/Pixels_Fotografia_y_Video-7_szcyje.jpg" alt="Paquete 2">
-              <div class="package-info">
-                <div class="package-name">Paquete 2</div>
-                <div class="package-features">
-                  Fotografía completa del evento (9 a 12 Hs)<br>
-                  + Fotografía Sesión Pre-Quince incluida (Locaciones a elección)<br>
-                  + 3 cambios de Outfits<br>
-                  + Maquillaje profesional
-                </div>
-                <div class="package-gift"><strong>Regalo:</strong> Video Reel Trailer — Resumen de tu sesión</div><br>
-                <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%202%20XV%20Evento%20%2B%20Video&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 990.000</span></a>
-              </div>
-            </div>
+          <div class="ev-card-body">
+            <div class="ev-inv-label">INVERSIÓN</div>
+            <div class="ev-price">$ 550.000</div>
+            <ul class="ev-features">
+              <li>Fotografía completa del evento (6 Hs)</li>
+              <li>Entrega digital en alta resolución</li>
+              <li>Galería online para compartir</li>
+            </ul>
+            <div class="ev-gift">🎁 <strong>Regalo:</strong> Video Cronológico de Fotos</div>
+            <a class="ev-btn" href="https://api.whatsapp.com/send/?phone=5493512518671&text=quiero%20contratar%20el%20Paquete%201%20XV%20Evento&type=phone_number&app_absent=0" target="_blank">CONTRATAR ESTE PAQUETE</a>
           </div>
-
-          <!-- Slide 3 -->
-          <div class="pkg-slide">
-            <div class="pkg-slide-inner">
-              <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640222/Pixels_Fotografia_y_Video-346_ymarkm.jpg" alt="Paquete 3">
-              <div class="package-info">
-                <div class="package-name">Paquete 3</div>
-                <div class="package-features">
-                  Incluye lo del Paquete 2<br>
-                  + Tarjeta de invitación digital<br>
-                  + Cobertura de Video Profesional Completa<br>
-                  + Video Sesión Pre-XV con Drone<br>
-                  + Video Resumen del Evento (20–40 min según fiesta)
-                </div>
-                <div class="package-gift"><strong>Regalo:</strong> Pendrive + 15 fotos impresas</div><br>
-                <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%203%20XV%20Completo&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 1.350.000</span></a>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /pkg-slider -->
-      </div><!-- /pkg-slider-wrap -->
-
-      <div class="slider-nav">
-        <button class="slider-arrow" id="ev-prev" onclick="slideEvento(-1)" disabled>&#8592;</button>
-        <div class="slider-dots" id="ev-dots">
-          <button class="slider-dot active" onclick="goEvento(0)"></button>
-          <button class="slider-dot" onclick="goEvento(1)"></button>
-          <button class="slider-dot" onclick="goEvento(2)"></button>
         </div>
-        <button class="slider-arrow" id="ev-next" onclick="slideEvento(1)">&#8594;</button>
+
+        <!-- Card 2 — destacada -->
+        <div class="ev-card ev-card-featured">
+          <div class="ev-card-badge-top">MÁS ELEGIDO</div>
+          <div class="ev-card-header">
+            <div class="ev-card-label">PAQUETE 2 — FOTO + SESIÓN</div>
+            <div class="ev-card-title">Foto Evento<br>+ <em>Sesión Pre-XV</em></div>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-inv-label">INVERSIÓN</div>
+            <div class="ev-price">$ 990.000</div>
+            <ul class="ev-features">
+              <li>Fotografía completa del evento (9 a 12 Hs)</li>
+              <li>Fotografía Sesión Pre-Quince incluida (Locaciones a elección)</li>
+              <li>3 cambios de Outfit</li>
+              <li>Maquillaje profesional</li>
+            </ul>
+            <div class="ev-gift">🎁 <strong>Regalo:</strong> Video Reel Trailer — Resumen de tu sesión</div>
+            <p class="ev-ideal"><em>Ideal para quinceañeras que quieren foto de evento y una sesión soñada.</em></p>
+            <a class="ev-btn ev-btn-highlight" href="https://api.whatsapp.com/send/?phone=5493512518671&text=quiero%20contratar%20el%20Paquete%202%20XV%20Evento%20%2B%20Video&type=phone_number&app_absent=0" target="_blank">LO QUIERO</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="ev-card">
+          <div class="ev-card-header">
+            <div class="ev-card-label">PAQUETE 3 — TODO INCLUIDO</div>
+            <div class="ev-card-title">Foto + Sesión<br>+ <em>Video completo</em></div>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-inv-label">INVERSIÓN</div>
+            <div class="ev-price">$ 1.350.000</div>
+            <div class="ev-includes-box">
+              <div class="ev-includes-title">TODO LO DEL PAQUETE 2, MÁS:</div>
+              <ul class="ev-features ev-features-plus">
+                <li>Cobertura de Video Profesional Completa</li>
+                <li>Tarjeta de invitación digital</li>
+                <li>Video Sesión Pre-XV con Drone</li>
+                <li>Video Resumen del Evento (20–40 min)</li>
+              </ul>
+            </div>
+            <div class="ev-gift">🎁 <strong>Regalo:</strong> Pendrive + 15 fotos impresas</div>
+            <p class="ev-ideal"><em>La experiencia audiovisual más completa para recordar cada momento.</em></p>
+            <a class="ev-btn" href="https://api.whatsapp.com/send/?phone=5493512518671&text=quiero%20contratar%20el%20Paquete%203%20XV%20Completo&type=phone_number&app_absent=0" target="_blank">CONTRATAR ESTE PAQUETE</a>
+          </div>
+        </div>
+
+      </div><!-- /ev-cards -->
+      <div class="ev-snap-dots" id="dots-evento">
+        <button class="ev-snap-dot active"></button>
+        <button class="ev-snap-dot"></button>
+        <button class="ev-snap-dot"></button>
       </div>
+    </div>
+    <div style="display:none">
+      <div id="slider-evento"></div>
+      <button id="ev-prev"></button><button id="ev-next"></button>
+      <div id="ev-dots"></div>
     </div>
 
     <!-- ── PANEL: SOLO SESIÓN ── -->
@@ -1617,56 +2064,64 @@
         <p class="sesion-intro-text">Por eso, creé paquetes enfocados 100% en la sesión de fotos, diseñados para capturar tu esencia en esta etapa <strong>inolvidable</strong>.</p>
       </div>
 
-      <div class="pkg-slider-wrap" style="margin-top:40px;">
-        <div class="pkg-slider" id="slider-sesion">
+      <div class="ev-cards-hint" style="margin-top:40px;">→ DESLIZÁ PARA VER LOS PLANES</div>
+      <div class="ev-cards" id="ev-cards-sesion" style="margin-top:0;">
 
-          <!-- Slide 1 -->
-          <div class="pkg-slide">
-            <div class="pkg-slide-inner">
-              <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640255/Pixels_Fotografia_y_Video-88_tbews1.jpg" alt="Sesión 1">
-              <div class="package-info">
-                <div class="package-name">Paquete 1</div>
-                <div class="package-features">
-                  Duración: 3 Horas<br>
-                  Locación a elección.<br>
-                  Todas las fotos digitales editadas.<br>
-                  Maquillaje profesional<br>
-                  3 cambios de Outfit.<br>
-                  Dirección de poses y elección de Outfit.<br>
-                  <em style="opacity:0.6;font-style:italic;">Ideal: estilo clásico + moderno</em>
-                </div>
-                <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%201%20Sesión%20XV&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 390.000</span></a>
-              </div>
-            </div>
+        <!-- Card 1 Sesión -->
+        <div class="ev-card">
+          <div class="ev-card-header">
+            <div class="ev-card-label">PAQUETE 1 — SESIÓN</div>
+            <div class="ev-card-title">Sesión<br>Pre-Quince</div>
           </div>
-
-          <!-- Slide 2 -->
-          <div class="pkg-slide">
-            <div class="pkg-slide-inner reverse">
-              <img class="package-img" src="https://res.cloudinary.com/dgo3agrzb/image/upload/v1778640245/Pixels_Fotografia_y_Video-7_szcyje.jpg" alt="Sesión 2">
-              <div class="package-info">
-                <div class="package-name">Paquete 2</div>
-                <div class="package-features">
-                  Incluye todo lo del Paquete 1<br>
-                  + Video Reel de la sesión (formato vertical, ideal para redes)<br>
-                  + Fotos Polaroid con 25 fotos<br>
-                  <em style="opacity:0.6;font-style:italic;">Ideal: experiencia audiovisual completa</em>
-                </div>
-                <a class="btn-contratar btn-contratar-shine" href="https://api.whatsapp.com/send/?phone=5493517364379&text=quiero%20contratar%20el%20Paquete%202%20Sesión%20XV&type=phone_number&app_absent=0" target="_blank"><span>Contratar · $ 690.000</span></a>
-              </div>
-            </div>
+          <div class="ev-card-body">
+            <div class="ev-inv-label">INVERSIÓN</div>
+            <div class="ev-price">$ 390.000</div>
+            <ul class="ev-features">
+              <li>Duración: 3 Horas</li>
+              <li>Locación a elección</li>
+              <li>Todas las fotos digitales editadas</li>
+              <li>Maquillaje profesional</li>
+              <li>3 cambios de Outfit</li>
+              <li>Dirección de poses y elección de Outfit</li>
+            </ul>
+            <p class="ev-ideal"><em>Ideal: estilo clásico + moderno</em></p>
+            <a class="ev-btn" href="https://api.whatsapp.com/send/?phone=5493512518671&text=quiero%20contratar%20el%20Paquete%201%20Sesión%20XV&type=phone_number&app_absent=0" target="_blank">CONTRATAR ESTE PAQUETE</a>
           </div>
-
-        </div><!-- /pkg-slider -->
-      </div><!-- /pkg-slider-wrap -->
-
-      <div class="slider-nav">
-        <button class="slider-arrow" id="ses-prev" onclick="slideSesion(-1)" disabled>&#8592;</button>
-        <div class="slider-dots" id="ses-dots">
-          <button class="slider-dot active" onclick="goSesion(0)"></button>
-          <button class="slider-dot" onclick="goSesion(1)"></button>
         </div>
-        <button class="slider-arrow" id="ses-next" onclick="slideSesion(1)">&#8594;</button>
+
+        <!-- Card 2 Sesión — destacada -->
+        <div class="ev-card ev-card-featured">
+          <div class="ev-card-badge-top">MÁS ELEGIDO</div>
+          <div class="ev-card-header">
+            <div class="ev-card-label">PAQUETE 2 — SESIÓN + VIDEO</div>
+            <div class="ev-card-title">Sesión<br>+ <em>Video Reel</em></div>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-inv-label">INVERSIÓN</div>
+            <div class="ev-price">$ 690.000</div>
+            <div class="ev-includes-box">
+              <div class="ev-includes-title">TODO LO DEL PAQUETE 1, MÁS:</div>
+              <ul class="ev-features ev-features-plus">
+                <li>Video Reel de la sesión (formato vertical, ideal para redes)</li>
+                <li>Fotos Polaroid con 25 fotos</li>
+              </ul>
+            </div>
+            <p class="ev-ideal"><em>Ideal: experiencia audiovisual completa</em></p>
+            <a class="ev-btn ev-btn-highlight" href="https://api.whatsapp.com/send/?phone=5493512518671&text=quiero%20contratar%20el%20Paquete%202%20Sesión%20XV&type=phone_number&app_absent=0" target="_blank">LO QUIERO</a>
+          </div>
+        </div>
+
+      </div><!-- /ev-cards sesion -->
+      <div class="ev-snap-dots" id="dots-sesion">
+        <button class="ev-snap-dot active"></button>
+        <button class="ev-snap-dot"></button>
+      </div>
+
+      <!-- placeholder JS refs -->
+      <div style="display:none">
+        <div id="slider-sesion"></div>
+        <button id="ses-prev"></button><button id="ses-next"></button>
+        <div id="ses-dots"></div>
       </div>
 
     </div>
@@ -1679,6 +2134,153 @@
 
 
 
+
+<!-- ═══ COMPARATIVA DE PAQUETES — EVENTO ═══ -->
+<section class="pag-comp comp-panel-evento" id="comp-evento">
+  <div class="pag-comp-inner">
+    <p class="comp-label">COMPARATIVA</p>
+    <h2 class="comp-title">Comparativa de <em>paquetes</em></h2>
+
+    <div class="comp-table-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th class="comp-th-feature">INCLUYE</th>
+            <th class="comp-th-plan">P1</th>
+            <th class="comp-th-plan comp-th-featured"><span class="comp-star-badge">P2 ★</span></th>
+            <th class="comp-th-plan">P3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fotografía completa del evento</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Entrega digital en alta resolución</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Galería online para compartir</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Sesión Pre-Quince (locaciones a elección)</td>
+            <td><span class="comp-no">✕</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>3 cambios de Outfit + Maquillaje profesional</td>
+            <td><span class="comp-no">✕</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Cobertura de Video Profesional Completa</td>
+            <td><span class="comp-no">✕</span></td>
+            <td class="comp-col-featured"><span class="comp-no">✕</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Tarjeta de invitación digital</td>
+            <td><span class="comp-no">✕</span></td>
+            <td class="comp-col-featured"><span class="comp-no">✕</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Video Sesión Pre-XV con Drone</td>
+            <td><span class="comp-no">✕</span></td>
+            <td class="comp-col-featured"><span class="comp-no">✕</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+          <tr>
+            <td>Video Resumen del Evento (20–40 min)</td>
+            <td><span class="comp-no">✕</span></td>
+            <td class="comp-col-featured"><span class="comp-no">✕</span></td>
+            <td><span class="comp-yes">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="comp-cta">
+      <a class="comp-cta-btn" href="https://api.whatsapp.com/send/?phone=5493512518671&text=Hola%21%20Quiero%20saber%20qu%C3%A9%20paquete%20es%20para%20m%C3%AD&type=phone_number&app_absent=0" target="_blank">QUIERO SABER CUÁL ES PARA MÍ →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPARATIVA DE PAQUETES — SOLO SESIÓN ═══ -->
+<section class="pag-comp comp-panel-sesion" id="comp-sesion" style="display:none;">
+  <div class="pag-comp-inner">
+    <p class="comp-label">COMPARATIVA</p>
+    <h2 class="comp-title">Comparativa de <em>paquetes</em></h2>
+
+    <div class="comp-table-wrap">
+      <table class="comp-table comp-table-2col">
+        <thead>
+          <tr>
+            <th class="comp-th-feature">INCLUYE</th>
+            <th class="comp-th-plan" style="width:28%;">P1 — SESIÓN</th>
+            <th class="comp-th-plan comp-th-featured" style="width:28%;"><span class="comp-star-badge">P2 ★ SESIÓN + VIDEO</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Duración: 3 Horas</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+          </tr>
+          <tr>
+            <td>Locación a elección</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+          </tr>
+          <tr>
+            <td>Todas las fotos digitales editadas</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+          </tr>
+          <tr>
+            <td>Maquillaje profesional</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+          </tr>
+          <tr>
+            <td>3 cambios de Outfit</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+          </tr>
+          <tr>
+            <td>Dirección de poses y elección de Outfit</td>
+            <td><span class="comp-yes">✓</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+          </tr>
+          <tr>
+            <td>Video Reel de la sesión (formato vertical, ideal para redes)</td>
+            <td><span class="comp-no">✕</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+          </tr>
+          <tr>
+            <td>Fotos Polaroid con 25 fotos</td>
+            <td><span class="comp-no">✕</span></td>
+            <td class="comp-col-featured"><span class="comp-yes comp-yes-big">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="comp-cta">
+      <a class="comp-cta-btn" href="https://api.whatsapp.com/send/?phone=5493512518671&text=Hola%21%20Quiero%20saber%20qu%C3%A9%20paquete%20de%20sesi%C3%B3n%20es%20para%20m%C3%AD&type=phone_number&app_absent=0" target="_blank">QUIERO SABER CUÁL ES PARA MÍ →</a>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ PAG 11 – ADICIONALES ═══ -->
 <section class="pag11">
@@ -1871,11 +2473,11 @@
     <div class="cta-title">No dejes<br>para<br>después</div>
     <p class="cta-desc">Garantizá ya tu fecha y obtené memorias eternizadas con todo el cariño que merecés. Porque los XV se viven una sola vez… pero se recuerdan para siempre.</p>
     <div class="contact-row">
-      <a class="contact-item" href="https://wa.me/5493517364379" target="_blank">
+      <a class="contact-item" href="https://wa.me/5493512518671" target="_blank">
         <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
-        351-7364379
+        351-2518671
       </a>
       <a class="contact-item" href="https://www.instagram.com/pixels_fotografia_y_video/" target="_blank">
         <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -1888,7 +2490,7 @@
 </section>
 
 <!-- ═══ FLOATING WHATSAPP BUTTON ═══ -->
-<a class="wa-float" href="https://api.whatsapp.com/send/?phone=5493517364379&text&type=phone_number&app_absent=0" target="_blank" aria-label="Contactar por WhatsApp">
+<a class="wa-float" href="https://api.whatsapp.com/send/?phone=5493512518671&text&type=phone_number&app_absent=0" target="_blank" aria-label="Contactar por WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
@@ -1912,6 +2514,9 @@
     }
     document.getElementById('tab-evento').classList.toggle('active', isEvento);
     document.getElementById('tab-sesion').classList.toggle('active', !isEvento);
+    // Toggle the comparativa sections
+    document.getElementById('comp-evento').style.display = isEvento ? '' : 'none';
+    document.getElementById('comp-sesion').style.display = isEvento ? 'none' : '';
   }
 
   // ── Slider logic ──
@@ -2046,8 +2651,44 @@
   }
 </script>
 
+<script>
+  // ── Snap dots for mobile ev-cards ──
+  function initSnapDots(cardsId, dotsId) {
+    var cards = document.getElementById(cardsId);
+    var dotsEl = document.getElementById(dotsId);
+    if (!cards || !dotsEl) return;
+    var dots = Array.from(dotsEl.querySelectorAll('.ev-snap-dot'));
+    var items = Array.from(cards.querySelectorAll('.ev-card'));
+    if (!items.length || !dots.length) return;
+
+    function updateDots() {
+      var scrollLeft = cards.scrollLeft;
+      var cardWidth = items[0].offsetWidth + 12;
+      var idx = Math.min(Math.round(scrollLeft / cardWidth), dots.length - 1);
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+    }
+
+    cards.addEventListener('scroll', updateDots, { passive: true });
+
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() {
+        var cardWidth = items[0].offsetWidth + 12;
+        cards.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    initSnapDots('ev-cards-evento', 'dots-evento');
+    initSnapDots('ev-cards-sesion', 'dots-sesion');
+  });
+</script>
+
 </body>
 </html>
+
+
+
 
 
 
